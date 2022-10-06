@@ -10,15 +10,16 @@ function maxOfTwoNumbers(num1, num2) {
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord(words) {
+function findLongestWord(arr) {
+
   let longestWorld = ''
-  for (i = 0; i < words.length; i++) {
-    if (words[i].length > longestWorld.length) {
-      longestWorld = words[i]
+  
+  if (arr.length === 0) return null;
+
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i].length > longestWorld.length) {
+      longestWorld = arr[i]
     }
-  }
-    if (words.length === 0) {
-      return null
   }
   return longestWorld
 }
@@ -26,41 +27,44 @@ function findLongestWord(words) {
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers(numbers) {
-  let sum = 0
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i]
+function sumNumbers(arr) {
+
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]
   }
   return sum
 }
 
 // Iteration #3.1 Bonus:
-function sum(arr) {
-  let sum = null;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i].length;
-  }
-  return sum;
+
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+function sum() {
+  
 }
 
 // Iteration #4: Calculate the average
+
 // Level 1: Array of numbers
+
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers(numbersAvg) {
-  let sum = 0
-  for (let i = 0; i < numbersAvg.lenght; i++) {
-    sum += numbersAvg[1]
-  }
-  let result = sum / numbersAvg.lenght
-  return result
-}
+function averageNumbers(arr) {
 
+  if (arr.length === 0) return null;
+
+  let averageNumbers = sumNumbers(arr) / arr.length
+  return averageNumbers
+}
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength() {
+  
+ }
 
 // Bonus - Iteration #4.1
 function avg() {}
